@@ -1,0 +1,60 @@
+package Test2;
+import java.util.Scanner;
+public class LabTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double salary,bonus,monthlysalary,highest=0,lowest=100000000;
+		int years,age, oldest=0,youngest=100;
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("Please enter your salary");
+		salary = sc.nextDouble();
+		
+		System.out.println("Please enter your year of service");
+		years = sc.nextInt();
+		
+		if(years>5)
+			bonus = 0.05*salary*12;
+		else
+			bonus = 0;
+		
+		System.out.println("Your net bonus is:RM "+ bonus);
+		
+		System.out.println("Please enter your monthly salary");
+		for(int i=0;i<12;i++) {
+			monthlysalary=sc.nextDouble();
+			if(monthlysalary>highest) {
+				highest=monthlysalary;
+			    System.out.println("The highest is RM "+ highest);
+			}
+			
+			if(monthlysalary<lowest) {
+				lowest=monthlysalary;
+			    System.out.println("The lowest is RM "+ lowest);
+			}
+		}
+		System.out.println("Please enter your age");
+		for(int i=0;i<3;i++) {
+				age=sc.nextInt();
+				
+				if(age>oldest)
+					oldest=age;
+				    System.out.println("The oldest is "+oldest);
+				    
+			    if(age<youngest)
+					youngest=age;
+					    System.out.println("The youngest is "+youngest);
+
+				
+		}		
+				
+		
+
+		
+
+		
+	
+	}
+
+}
